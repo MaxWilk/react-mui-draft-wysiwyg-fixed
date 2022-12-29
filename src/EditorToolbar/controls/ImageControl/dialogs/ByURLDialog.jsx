@@ -84,7 +84,7 @@ function ByUrlDialog({ open, onClose, onSubmit }) {
         );
 
     return (
-        <Dialog open={open} onClose={onClose} onEnter={resetForm}>
+        <Dialog open={open} onClose={onClose} TransitionProps={{ onEnter: resetForm }}>
             <form onSubmit={handleSubmit}>
                 <DialogContent>
                     {isValidImage && imageURL !== '' && (
