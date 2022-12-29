@@ -141,7 +141,7 @@ function UploadDialog({ open, onClose, onSubmit, uploadCallback }) {
     }
 
     return (
-        <Dialog open={open} onClose={onClose} onEnter={resetForm}>
+        <Dialog open={open} onClose={onClose} TransitionProps={{ onEnter: resetForm }}>
             <form onSubmit={handleSubmit}>
                 <DialogContent>
                     <input
